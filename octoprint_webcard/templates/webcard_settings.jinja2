@@ -1,0 +1,32 @@
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Zobrazit titulek?</label>
+    <div class="col-sm-9">
+      <input type="checkbox" data-bind="checked: settings.plugins.webcard.show_title">
+    </div>
+  </div>
+  <div class="form-group" data-bind="visible: settings.plugins.webcard.show_title">
+    <label class="col-sm-3 control-label">Text titulku</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" data-bind="value: settings.plugins.webcard.title_text">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Zobrazit FontAwesome ikonu?</label>
+    <div class="col-sm-9">
+      <input type="checkbox" data-bind="checked: settings.plugins.webcard.show_icon">
+    </div>
+  </div>
+  <div class="form-group" data-bind="visible: settings.plugins.webcard.show_icon">
+    <label class="col-sm-3 control-label">Třída ikony (např. fa-globe)</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" data-bind="value: settings.plugins.webcard.icon_class">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">URL webové stránky</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" data-bind="value: settings.plugins.webcard.webpage_url">
+    </div>
+  </div>
+</form>

@@ -1,0 +1,10 @@
+<div id="tab_plugin_webcard" class="container-fluid">
+  {% if plugin_webcard_show_title %}
+    <h1>{{ plugin_webcard_title_text|escape }}</h1>
+  {% elif plugin_webcard_show_icon %}
+    <i class="fa {{ plugin_webcard_icon_class|escape }}"></i>
+  {% endif %}
+  <!-- Zde využíváme iframe pro načtení stránky; alternativně lze využít modernější komponentu, 
+       ale toto řešení je osvědčené a jednoduché -->
+  <iframe data-bind="attr: { src: currentUrl }" style="width:100%; height:600px; border:0;"></iframe>
+</div>
