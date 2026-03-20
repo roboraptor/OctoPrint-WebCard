@@ -33,6 +33,14 @@ class WebCardPlugin(octoprint.plugin.StartupPlugin,
                  tablename="Web Page")
         ]
 
+    def get_template_vars(self):
+        return dict(
+            plugin_webcard_show_title=self._settings.get(["show_title"]),
+            plugin_webcard_title_text=self._settings.get(["title_text"]),
+            plugin_webcard_show_icon=self._settings.get(["show_icon"]),
+            plugin_webcard_icon_class=self._settings.get(["icon_class"])
+        )
+
     def get_assets(self):
         return dict(
             js=["js/webcard.js"]
