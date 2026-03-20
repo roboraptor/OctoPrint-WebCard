@@ -22,7 +22,7 @@ class WebCardPlugin(octoprint.plugin.StartupPlugin,
         return [
             # Configuration of the new tab in the UI
             dict(type="tab",
-                 custom_bindings=True,
+                 custom_bindings=False,
                  template="webcard_tab.jinja2",
                  tab_slug="webcard",
                  title="Web Page"),
