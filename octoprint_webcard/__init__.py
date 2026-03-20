@@ -12,10 +12,10 @@ class WebCardPlugin(octoprint.plugin.StartupPlugin,
     def get_settings_defaults(self):
         return dict(
             show_title=True,           # if True, the title will be displayed
-            title_text="Web Page", # title text
-            show_icon=False,           # if True, a FontAwesome icon will be displayed instead of text
+            title_text="Printables", # title text
+            show_icon=True,           # if True, a FontAwesome icon will be displayed instead of text
             icon_class="fa-globe",     # FontAwesome icon class
-            webpage_url="https://example.com"  # URL of the page to be displayed
+            webpage_url="http://www.printables.com"  # URL of the page to be displayed
         )
 
     def get_template_configs(self):
