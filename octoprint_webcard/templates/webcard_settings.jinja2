@@ -1,30 +1,30 @@
 <form class="form-horizontal">
   <div class="form-group">
-    <label class="col-sm-3 control-label">Zobrazit titulek?</label>
+    <label class="col-sm-3 control-label">Show title?</label>
     <div class="col-sm-9">
       <input type="checkbox" data-bind="checked: settings.plugins.webcard.show_title">
     </div>
   </div>
   <div class="form-group" data-bind="visible: settings.plugins.webcard.show_title">
-    <label class="col-sm-3 control-label">Text titulku</label>
+    <label class="col-sm-3 control-label">Title text</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" data-bind="value: settings.plugins.webcard.title_text">
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">Zobrazit FontAwesome ikonu?</label>
+    <label class="col-sm-3 control-label">Show FontAwesome icon?</label>
     <div class="col-sm-9">
       <input type="checkbox" data-bind="checked: settings.plugins.webcard.show_icon">
     </div>
   </div>
   <div class="form-group" data-bind="visible: settings.plugins.webcard.show_icon">
-    <label class="col-sm-3 control-label">Třída ikony (např. fa-globe)</label>
+    <label class="col-sm-3 control-label">Icon class (e.g. fa-globe)</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" data-bind="value: settings.plugins.webcard.icon_class">
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-3 control-label">URL webové stránky</label>
+    <label class="col-sm-3 control-label">Web page URL</label>
     <div class="col-sm-9">
       <input type="text" class="form-control" data-bind="value: settings.plugins.webcard.webpage_url">
     </div>

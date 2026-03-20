@@ -7,30 +7,30 @@ class WebCardPlugin(octoprint.plugin.StartupPlugin,
 
     def on_after_startup(self):
         url = self._settings.get(["webpage_url"])
-        self._logger.info("WebCardPlugin spuštěn. Zobrazuje stránku: %s" % url)
+        self._logger.info("WebCardPlugin started. Displaying page: %s" % url)
 
     def get_settings_defaults(self):
         return dict(
-            show_title=True,           # pokud True, zobrazí se titulek
-            title_text="Moje Web Karta", # text titulku
-            show_icon=False,           # pokud True, zobrazí se FontAwesome ikona místo textu
-            icon_class="fa-globe",     # třída FontAwesome ikony
-            webpage_url="https://example.com"  # URL stránky, která se má zobrazit
+            show_title=True,           # if True, the title will be displayed
+            title_text="Web Page", # title text
+            show_icon=False,           # if True, a FontAwesome icon will be displayed instead of text
+            icon_class="fa-globe",     # FontAwesome icon class
+            webpage_url="https://example.com"  # URL of the page to be displayed
         )
 
     def get_template_configs(self):
         return [
-            # Konfigurace nové karty (tab) v UI
+            # Configuration of the new tab in the UI
             dict(type="tab",
-                 custom_bindings=False,
+                 custom_bindings=True,
                  template="webcard_tab.jinja2",
                  tab_slug="webcard",
-                 title="Web Karta"),
-            # Konfigurace nastavení pluginu
+                 title="Web Page"),
+            # Plugin settings configuration
             dict(type="settings",
                  custom_bindings=False,
                  template="webcard_settings.jinja2",
-                 tablename="Web Karta")
+                 tablename="Web Page")
         ]
 
     def get_assets(self):
@@ -40,6 +40,6 @@ class WebCardPlugin(octoprint.plugin.StartupPlugin,
 
 __plugin_name__ = "Web Card Plugin"
 __plugin_version__ = "1.0.0"
-__plugin_description__ = "Plugin, který přidává kartu s nastavitelnou webovou stránkou do UI OctoPrint. V nastavení lze vybrat, zda se zobrazí titulek či FontAwesome ikona, a nastavit URL."
+__plugin_description__ = "A plugin that adds a tab with a configurable web page to the OctoPrint UI. In the settings, you can choose whether to display a title or a FontAwesome icon, and set the URL."
 __plugin_pythoncompat__ = ">=3.7,<4"
 __plugin_implementation__ = WebCardPlugin()

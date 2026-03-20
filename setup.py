@@ -5,10 +5,10 @@ plugin_identifier = "webcard"
 plugin_package = "octoprint_webcard"
 plugin_name = "Web Card Plugin"
 plugin_version = "1.0.0"
-plugin_description = "Plugin, který přidává kartu s nastavitelnou webovou stránkou do UI OctoPrint."
+plugin_description = "A plugin that adds a tab with a configurable web page to the OctoPrint UI."
 plugin_author = "Roboraptor66"
 plugin_author_email = "eroboraptor@gmail.com"
-plugin_url = "https://github.com/roboraptor/OctoPrint-WebCard"
+
 plugin_license = "AGPLv3"
 plugin_requires = [] 
 plugin_additional_data = []
@@ -36,7 +36,7 @@ setup_parameters = octoprint_setuptools.create_plugin_setup_parameters(
 	description=plugin_description,
 	author=plugin_author,
 	mail=plugin_author_email,
-	url=plugin_url,
+
 	license=plugin_license,
 	requires=plugin_requires,
 	additional_packages=plugin_additional_packages,

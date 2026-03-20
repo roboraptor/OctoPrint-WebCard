@@ -1,12 +1,12 @@
 $(function() {
     function WebCardViewModel(parameters) {
         var self = this;
-        // Vstupní parametr settingsViewModel je injektován OctoPrintem
+        // The settingsViewModel input parameter is injected by OctoPrint
         self.settings = parameters[0];
-        // Observable pro aktuální URL, načtenou z nastavení pluginu
+        // Observable for the current URL, loaded from the plugin settings
         self.currentUrl = ko.observable(self.settings.settings.plugins.webcard.webpage_url());
 
-        // Sleduj změny URL v nastavení a aktualizuj observable
+        // Watch for changes to the URL in the settings and update the observable
         self.settings.settings.plugins.webcard.webpage_url.subscribe(function(newVal) {
             self.currentUrl(newVal);
         });
