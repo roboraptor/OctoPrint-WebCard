@@ -1,0 +1,13 @@
+README.md
+setup.py
+Web_Card_Plugin.egg-info/PKG-INFO
+Web_Card_Plugin.egg-info/SOURCES.txt
+Web_Card_Plugin.egg-info/dependency_links.txt
+Web_Card_Plugin.egg-info/entry_points.txt
+Web_Card_Plugin.egg-info/not-zip-safe
+Web_Card_Plugin.egg-info/requires.txt
+Web_Card_Plugin.egg-info/top_level.txt
+octoprint_webcard/__init__.py
+octoprint_webcard/static/js/webcard.js
+octoprint_webcard/templates/webcard_settings.jinja2
+octoprint_webcard/templates/webcard_tab.jinja2
