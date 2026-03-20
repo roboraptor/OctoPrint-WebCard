@@ -34,8 +34,11 @@ class WebCardPlugin(octoprint.plugin.StartupPlugin,
         ]
 
     def get_template_vars(self):
+        self._logger.info("--- WebCard --- Getting template vars")
+        show_title = self._settings.get(["show_title"])
+        self._logger.info("--- WebCard --- show_title: %s" % show_title)
         return dict(
-            plugin_webcard_show_title=self._settings.get(["show_title"]),
+            plugin_webcard_show_title=show_title,
             plugin_webcard_title_text=self._settings.get(["title_text"]),
             plugin_webcard_show_icon=self._settings.get(["show_icon"]),
             plugin_webcard_icon_class=self._settings.get(["icon_class"])
